@@ -1,0 +1,65 @@
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    border: 2px solid #e7da99; /* Цвет рамки в стиле McDonald's */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(231, 218, 153, 0.29); /* Цвет фона в стиле McDonald's */
+    cursor: pointer;
+    width: calc((100% - 40px) / 3); /* Ширина карточки плюс отступы между ними */
+    box-sizing: border-box; /* Учитываем padding и border в расчете ширины */
+    margin-bottom: 20px;
+    transition: background-color 0.3s, border-color 0.3s; /* Плавный переход для цвета фона и рамки */
+}
+
+/* При меньших экранах уменьшаем количество карточек в ряду */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc((100% - 40px) / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* Одна карточка на всю ширину */
+    }
+}
+
+.product-card:hover {
+    background-color: #fff;
+    border-color: #e7da99;
+}
+
+.product-card h3 {
+    margin-top: 0;
+}
+
+.product-details {
+    display: none;
+}
+
+.product-card:hover .product-details {
+    display: block;
+}
