@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from backend.api.api import router as api_products  # Импортируйте ваш роутер
+from backend.api.api import router as api_products
 from starlette.middleware.cors import CORSMiddleware
 
 
